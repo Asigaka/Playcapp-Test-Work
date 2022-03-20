@@ -1,8 +1,7 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum UIType { Settings, HUD}
+public enum UIType { Settings, HUD }
 public class UIManager : MonoBehaviour
 {
     [SerializeField] private UIType startType = UIType.Settings;
