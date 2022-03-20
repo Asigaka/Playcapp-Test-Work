@@ -51,7 +51,7 @@ public class UISettings : MonoBehaviour
             settings.UpdateSettings(xOffset, zOffset, speed, spawnTime);
             UIManager.Instance.Toogle(UIType.HUD);
         }
-        catch (Exception e)
+        catch (Exception)
         {
             Log("В полях можно указывать только цифры!");
         }
