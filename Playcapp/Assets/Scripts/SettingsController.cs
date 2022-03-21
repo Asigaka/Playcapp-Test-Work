@@ -12,8 +12,6 @@ public class SettingsController : MonoBehaviour
     private float speed;
     private float timeToSpawn;
 
-    private UISettings uiSettings;
-
     public static SettingsController Instance;
 
     public float XOffset { get => xOffset; }
@@ -27,11 +25,6 @@ public class SettingsController : MonoBehaviour
             Destroy(Instance);
 
         Instance = this;
-    }
-
-    private void Start()
-    {
-        uiSettings = UISettings.Instance;
 
         UpdateSettings(startXOffset, startZOffset, startSpeed, startTimeToSpawn);
     }

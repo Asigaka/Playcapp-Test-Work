@@ -26,12 +26,13 @@ public class UISettings : MonoBehaviour
 
     private void Start()
     {
-        settings = SettingsController.Instance;
         applyBtn.onClick.AddListener(Apply);
     }
 
     public void UpdateUI()
     {
+        settings = SettingsController.Instance;
+
         xOffsetInput.text = settings.XOffset.ToString();
         zOffsetInput.text = settings.ZOffset.ToString();
         speedInput.text = settings.Speed.ToString();
@@ -51,7 +52,7 @@ public class UISettings : MonoBehaviour
             settings.UpdateSettings(xOffset, zOffset, speed, spawnTime);
             UIManager.Instance.Toogle(UIType.HUD);
         }
-        catch (Exception)
+        catch (FormatException)
         {
             Log("В полях можно указывать только цифры!");
         }
